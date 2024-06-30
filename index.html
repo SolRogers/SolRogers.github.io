@@ -3,75 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quacky Cat - 90s Style</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quacky Cat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="button" href="#">X Account</a></li>
-                <li><a class="button" href="#">Telegram</a></li>
-                <li><a class="button" href="#">Dexscreener</a></li>
-            </ul>
-        </nav>
-        <h1>Quacky Cat</h1>
-        <p class="slogan">$quacky, it's a cat that quacks...</p>
-        <div class="token-bar">
-            <p class="token">Token Address: <span>0x123...ABC</span></p>
-        </div>
-        <div class="shapes">
-            <div class="shape square"></div>
-            <div class="shape circle"></div>
-            <div class="shape triangle"></div>
+        <div class="top-bar">
+            <a href="#" class="buy-now">BUY NOW</a>
+            <div class="logo">$QUACKY</div>
+            <div class="hamburger-menu" onclick="openNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </header>
-    <main>
-        <section class="hero">
-            <img src="hero.png" alt="Quacky Cat Hero Image">
-        </section>
-        <section class="gallery">
-            <div class="column">
-                <img src="cat1.jpg" alt="Quacky Cat Pose 1">
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#"><img src="x-icon.png" alt="X (Twitter)"></a>
+            <a href="#"><img src="telegram-icon.png" alt="Telegram"></a>
+            <a href="#"><img src="dexscreener-icon.png" alt="Dexscreener"></a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>Quacky Cat</h1>
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <h2><span class="quacky">$QUACKY</span> <span class="star">★</span> THE CAT DUCKING QUACKS</h2>
             </div>
-            <div class="column">
-                <img src="cat2.jpg" alt="Quacky Cat Pose 2">
-            </div>
-            <div class="column">
-                <img src="cat3.jpg" alt="Quacky Cat Pose 3">
-            </div>
-        </section>
-        <section class="about">
-            <h2>About Quacky Cat</h2>
-            <p>Quacky Cat is a fun and adventurous character who loves to play and explore. Join Quacky Cat on exciting adventures and see the world through playful eyes.</p>
-        </section>
-        <section class="how-to-buy">
-            <h2>How to Buy</h2>
-            <div class="step">
-                <h3>1. Create a Wallet</h3>
-                <p>Download Phantom or your wallet of choice from the app store or Google Play store for free. Desktop users can download the Google Chrome extension by going to the Phantom app.</p>
-            </div>
-            <div class="step">
-                <h3>2. Get Some SOL</h3>
-                <p>Have SOL in your wallet to switch to $quacky. If you don't have any SOL, you can buy SOL from an exchange or cross chain swap and send it to your wallet.</p>
-            </div>
-            <div class="step">
-                <h3>3. Go to Raydium</h3>
-                <p>Connect to Raydium. Go to raydium.io in Google Chrome or on the browser inside your Phantom app. Connect your wallet. Paste the $quacky token address into Raydium and confirm the swap. When Phantom prompts you for a wallet signature, sign it.</p>
-            </div>
-            <div class="step">
-                <h3>4. Swap</h3>
-                <p>Switch SOL for $quacky.</p>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Quacky Cat. All rights reserved.</p>
-        <div class="social">
-            <span>Follow us:</span>
-            <a href="#"><img src="social1.gif" alt="Social Icon 1"></a>
-            <a href="#"><img src="social2.gif" alt="Social Icon 2"></a>
-            <a href="#"><img src="social3.gif" alt="Social Icon 3"></a>
+        <div class="footer-content">
+            <div class="address">
+                <p>4871 CK ETTEN-LEUR</p>
+                <p>GEEKRADE 21</p>
+            </div>
+            <div class="contact">
+                <p>076-72 00 911</p>
+                <p>HEY@QUACKYCAT.AGENCY</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="phone-icon.png" alt="Phone"></a>
+                <a href="#"><img src="email-icon.png" alt="Email"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 QUACKY CAT</p>
+            <p>WEBSITE BY [YOUR NAME]</p>
         </div>
     </footer>
 </body>
