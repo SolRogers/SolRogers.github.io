@@ -5,6 +5,7 @@ body {
     color: #000;
     text-align: center;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header .top-bar {
@@ -16,6 +17,7 @@ header .top-bar {
     color: #ffeb3b;
     font-weight: 900;
     position: relative;
+    z-index: 100; /* Ensure header is on top */
 }
 
 header .logo {
@@ -50,7 +52,7 @@ header .hamburger-menu .bar {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 200; /* Ensure overlay is on top */
     top: 0;
     left: 0;
     background-color: #ffeb3b;
@@ -74,10 +76,19 @@ header .hamburger-menu .bar {
     color: #000;
     display: block;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .overlay-content a:hover, .overlay-content a:focus {
     color: #333;
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .overlay .closebtn {
@@ -159,37 +170,65 @@ header .hamburger-menu .bar {
     }
 }
 
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.polaroid {
+    position: absolute;
+    width: 300px;  /* Make the polaroid images larger */
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #000;
+    transition: transform 1.5s ease, opacity 1.5s ease; /* Slow down appearance */
+    opacity: 0;
+    z-index: 10;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 footer {
     background-color: #000;
     color: #ffeb3b;
-    font-weight: 900;
     padding: 40px 20px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.footer-content div {
-    text-align: left;
+.footer-content .lore {
+    text-align: center;
 }
 
-.footer-content .social-media {
-    display: flex;
-    gap: 20px;
+.footer-content .lore h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.footer-content .social-media a img {
-    width: 24px;
-    height: 24px;
+.footer-content .lore p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     font-size: 0.8rem;
 }
