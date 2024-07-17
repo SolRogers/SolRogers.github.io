@@ -5,19 +5,25 @@ body {
     text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
+    background: #ffeb3b; /* Fallback background color */
 }
 
 #background-video {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
     transform: translate(-50%, -50%);
     z-index: -1;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #background-video {
+        width: auto;
+        height: 100vh;
+    }
 }
 
 header .top-bar {
