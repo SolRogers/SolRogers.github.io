@@ -76,4 +76,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Scroll event listener added');
     window.addEventListener('scroll', onScroll);
+
+    // Video autoplay workaround for mobile devices
+    const video = document.getElementById('background-video');
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log('Autoplay was prevented. Adding event listener to play video on interaction.');
+            document.addEventListener('click', () => {
+                video.play().catch(error => console.error('Error attempting to play video:', error));
+            }, { once: true });
+        });
+    }
 });
