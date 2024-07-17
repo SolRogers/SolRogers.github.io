@@ -86,7 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Autoplay was prevented. Adding event listener to play video on interaction.');
             document.addEventListener('click', () => {
                 video.play().catch(error => console.error('Error attempting to play video:', error));
-            }, { once: true });
+            });
+            document.addEventListener('touchstart', () => {
+                video.play().catch(error => console.error('Error attempting to play video:', error));
+            });
         });
     }
 });
